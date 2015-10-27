@@ -1,0 +1,98 @@
+* {
+	font-family: Arial;
+}
+
+#bodyWrapper {
+	max-width: 30em;
+	text-align: center;
+	margin: 1em auto;
+}
+
+#stats, #messages, #timer {
+	display: none;
+}
+
+#stats, #donutChartWrapper, #timeChartWrapper {
+	max-width: 30em;
+}
+
+#content {
+	text-align: center;
+}
+
+#stats {
+	margin-top: 1em;
+}
+
+.statsWrapper {
+	width: 31%;
+	display: inline-block;
+	text-align: center;
+	padding-top: 0.8em;
+	padding-bottom: 0.4em;
+}
+
+.counter {
+	font-size: 120%;
+	font-weight: bold;
+	padding-top: 0.2em;
+} 
+
+.greenBackground {
+	background-color: #9FBE54;
+}
+
+.redBackground {
+	background-color: #BE390B;
+}
+
+#actionLink, #connectionStatus, #timer {
+	display: block;
+	padding: 0.4em;
+}
+
+#timer {
+	padding-left: 0.1em;
+}
+
+#actionLink {
+	float: right;
+	cursor: pointer;
+	color: #fff;
+}
+
+#connectionStatus, #timer {
+	float: left;
+}
+
+.percentage {
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.message.blue, .message.red, .message.green {
+	display: block;
+	padding: 1em;
+	color: #555555;
+}
+
+#greenPercentage, .green {
+	color: #9FBE54;
+}
+
+#bluePercentage, .blue {
+	color: #556C9B;
+}
+
+#redPercentage, .red {
+	color: #BE390B;
+}
+
+svg {
+	max-height: 26em;
+}
+
+path {
+	stroke-width: 10px;
+	stroke: #f9fafc;
+}

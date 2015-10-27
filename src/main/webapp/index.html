@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Websocket counter demo</title>
+	
+	<link rel="stylesheet" href="css/style.css">
+		
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+		
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/counter.js"></script>
+	<script type="text/javascript">
+	
+		window.onload = function() {
+			
+			if (window.WebSocket) {
+				WSCounter.init();
+			} else {
+				
+				var contentDiv = document.getElementById("content");
+				while (contentDiv.firstChild) {
+					contentDiv.removeChild(contentDiv.firstChild);
+				}
+				contentDiv.innerHTML = "Your browser doesn't support Websockets.";
+			}
+		};
+	</script>
+		
+</head>
+<body>
+
+	<div id="bodyWrapper">
+	
+		<header id="header"> 
+			<span id="connectionStatus" class="red">Not connected</span>
+			<span id="timer"></span>
+			<a id="actionLink" class="greenBackground">Connect to server</a>
+		</header>
+		
+		<span id="errorMessage"></span>
+	
+		<div id="content">
+
+			<div id="donutChartWrapper"></div>
+
+			<div id="timeChartWrapper"></div>
+
+			<div id="stats">
+			
+				<div class="statsWrapper">
+					<div id="greenPercentage" class="percentage"></div>
+					<div id="greenCounter" class="counter"></div>
+				</div>
+			
+				<div class="statsWrapper">
+					<div id="bluePercentage" class="percentage"></div>
+					<div id="blueCounter" class="counter"></div>
+				</div>
+			
+				<div class="statsWrapper">
+					<div id="redPercentage" class="percentage"></div>
+					<div id="redCounter" class="counter"></div>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
